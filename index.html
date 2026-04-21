@@ -18,8 +18,8 @@
                 </div>
             </div>
 
-            <input type ="text" id="user" class="form-control mb-2" placeholder="Username">
-            <input type ="password" class="form-control mb-2" placeholder="Password">
+            <input type ="text" id="username" class="form-control mb-2" placeholder="Username">
+            <input type ="password" id="password" class="form-control mb-2" placeholder="Password">
             <div class="form-check text-start">
                 <input class="form-check-input" type="checkbox" id="checkboxID" onclick="showMessage()">
                 <label class="form-check-label">Remember me</label>
@@ -43,19 +43,18 @@
             }
         }
 
-        function login(){
+        function login() {
 
-        let username = document.getElementById("username").value;
-        let password = document.getElementById("password").value;
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
 
-        if(username === "Username" && password === "Password"){
-            alert("Login successful!");
-            window.location.href = "notebooks.html";
-        } else {
-            alert("Invalid username or password.");
+            if (username === "Username" && password === "Password") {
+                alert("Login successful!");
+                window.location.href = "notebooks.html";
+            } else {
+                alert("Invalid username or password.");
+            }
         }
-
-    }
     </script>
     
 </body>
