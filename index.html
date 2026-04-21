@@ -9,26 +9,21 @@
 
     <div class="RedApps">
         <div id="form-box">
-
             <h4 class="title mb-3">Login to Account</h4>
 
-            <div class="collapse mb-3" id="instructions">
-                <div class="card card-body">
-                    <p>Please enter all of your credentials in the specified fields.</p>
-                </div>
-            </div>
+            <input type="text" id="username" class="form-control mb-2" placeholder="Username">
+            
+            <input type="password" id="password" class="form-control mb-2" placeholder="Password">
 
-            <input type ="text" id="username" class="form-control mb-2" placeholder="Username">
-            <input type ="password" id="password" class="form-control mb-2" placeholder="Password">
             <div class="form-check text-start">
                 <input class="form-check-input" type="checkbox" id="checkboxID" onclick="showMessage()">
                 <label class="form-check-label">Remember me</label>
             </div>
 
             <p id="message"></p>
-            <button class="btn btn-info w-100 mt-2" onclick="checkLogin()">Login</button>
+            
+            <button class="btn btn-info w-100 mt-2" onclick="login()">Login</button>
         </div> 
-
     </div>
 
     <script>
@@ -44,9 +39,9 @@
         }
 
         function login() {
-
             let username = document.getElementById("username").value;
             let password = document.getElementById("password").value;
+
 
             if (username === "Username" && password === "Password") {
                 alert("Login successful!");
